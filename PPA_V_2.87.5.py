@@ -21,15 +21,45 @@ import time
 
 st.set_page_config(layout="wide")
 
+# Footer section
+footer = """
+<style>
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #44475a;
+    color: #f8f8f2;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+a {
+    color: #bd93f9;
+    text-decoration: none;
+}
+</style>
+<footer>
+    Made with ❤️ | Liberty Energy 
+</footer>
+"""
+
+st.markdown(footer, unsafe_allow_html=True)
+
 # Place the logo and title side by side
 col_logo, col_title = st.columns([1, 5])
 
-'''
-with col_logo:
-    st.image('/path/to/your/logo.png', width=100)  # Replace with your logo path or URL
-'''
+logo_html = """
+<a href="https://libertyenergy.com/" target="_blank">
+    <img src="	https://libertyenergy.com/wp-content/uploads/2023/05/Liberty-Energy-Horizontal-Logo.png" 
+         alt="Liberty Energy Logo" style="width: 400px;"/>
+</a>
+"""
+st.markdown(logo_html, unsafe_allow_html=True)
 
-st.title('Liberty Energy Proppant Simulation - Unfinished')
+st.title('FracSim 🚧')
 
 # -------------------- Keep track of parameter change events --------------------
 if "param_change_events" not in st.session_state:
