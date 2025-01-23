@@ -367,11 +367,11 @@ if uploaded_file is not None:
 
     def display_boxes(boxes_consumed, total_boxes, num_boxes_to_display, label, container):
         with container.container():
-            st.write(f"**{label} Boxes**")
+            st.success(f"**{label} Boxes**")
             total_boxes = int(total_boxes)
             num_boxes_to_display = int(num_boxes_to_display)
             if total_boxes <= 0:
-                st.write("No boxes to display.")
+                st.warning("No boxes to display.")
                 return
             cols = st.columns(num_boxes_to_display)
             for i in range(num_boxes_to_display):
@@ -703,7 +703,7 @@ if uploaded_file is not None:
                 else:
                     boxes_placeholder_calc.empty()
         else:
-            st.write("Please start the simulation to see the plot and numerical values.")
+            st.warning("Please start the simulation to see the plot and numerical values.")
 
     # -- Analysis Mode / Plots --
     if st.session_state.analysis_mode:
@@ -980,7 +980,7 @@ if uploaded_file is not None:
             )
 
 else:
-    st.write("Please upload a CSV file from the sidebar to begin.")
+    st.error("Please upload a CSV file from the sidebar to begin.")
     
     
     
