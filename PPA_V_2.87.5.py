@@ -59,7 +59,7 @@ logo_html = """
 """
 st.markdown(logo_html, unsafe_allow_html=True)
 
-st.title('ProppantIQ')
+st.title('ProppantIQ ⛱️')
 
 # -------------------- Keep track of parameter change events --------------------
 if "param_change_events" not in st.session_state:
