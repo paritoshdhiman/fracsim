@@ -19,6 +19,8 @@ import asyncio
 import os
 import io
 import time
+from reportlab.pdfgen import canvas
+from reportlab.lib.pagesizes import A4, landscape
 
 st.set_page_config(layout="wide")
 
