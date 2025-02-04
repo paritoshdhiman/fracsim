@@ -513,16 +513,19 @@ if uploaded_file is not None:
             fig.update_layout(
                 xaxis=dict(domain=[0.05, 0.95], range=[x_min, x_max]),
                 yaxis=dict(
-                    title="Prop Conc",
+                    title=dict(text = "Prop Conc", font = dict(color='green')),
                     range=[0, y1_max],
                     showgrid=True,
                     titlefont=dict(color='green'),
-                    tickfont=dict(color='green')     
+                    # tickfont=dict(color='green')     
                 ),
                 yaxis3=dict(
-                    title="Rate (bpm)",
+                    title=dict(
+                        text="Rate (bpm)",
+                        font=dict(color=y3_color)
+                    ),
                     titlefont=dict(color=y3_color),
-                    tickfont=dict(color=y3_color),
+                    # tickfont=dict(color=y3_color),
                     anchor='free',
                     overlaying='y',
                     side='right',
@@ -531,9 +534,12 @@ if uploaded_file is not None:
                     showgrid=False,
                 ),
                 yaxis4=dict(
-                    title=y4_column,
+                    title=dict(
+                        text=y4_column,
+                        font=dict(color=y4_color)
+                    ),
                     titlefont=dict(color=y4_color),
-                    tickfont=dict(color=y4_color),
+                    # tickfont=dict(color=y4_color),
                     anchor='free',
                     overlaying='y',
                     side='right',
