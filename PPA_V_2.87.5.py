@@ -17,6 +17,7 @@ from fpdf import FPDF
 import tempfile          
 import asyncio
 import os
+import io
 import time
 
 st.set_page_config(layout="wide")
